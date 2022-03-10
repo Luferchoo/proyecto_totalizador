@@ -1,6 +1,9 @@
 function porcentaje_descuento(cantidad, precio) {
     var descuento = 0;
-    if(cantidad >= 3000){
+    if(cantidad >= 7000){
+        descuento = (precio*7)/100;
+    }
+    else if(cantidad >= 3000){
         descuento = (precio*5)/100;
     }
     else if(cantidad >= 1000){
