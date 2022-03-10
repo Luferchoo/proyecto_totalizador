@@ -2,6 +2,7 @@ import tasaImpu from './Tasa';
 import precio_neto from './precio_neto';
 import impuesto_total_ca from './impuesto_total_ca';
 import porcentaje_descuento from './porcentaje_descuento';
+import precio_total from './precio_total';
 
 const items = document.querySelector("#items-numero");
 const precio = document.querySelector("#precio-numero");
@@ -21,6 +22,7 @@ form.addEventListener("submit", (event) => {
   const precio_net = precio_neto(items_numero,precio_numero);
   const impuesto_total = impuesto_total_ca(precio_net,impuesto);
   const descuento = porcentaje_descuento(items_numero,precio_net);
+  const precio_tot= precio_total(precio_net,impuesto_total,descuento);
 
   div.innerHTML = "<p>" + "Cantidad de items:      " + items_numero + 
   "<br/>Precio por Item:       " + precio_numero + 
@@ -28,6 +30,8 @@ form.addEventListener("submit", (event) => {
   "<br/>Impuesto:       " + impuesto + 
   "<br/>Precio Neto:       " + precio_net +
   "<br/>Impuesto Total:       " + impuesto_total +
-  "<br/>Descuento Total:       " + descuento +"</p>";
+  "<br/>Descuento Total:       " + descuento +
+  "<br/>Precio Total:       " + precio_tot +"</p>";
+  
 });
 
