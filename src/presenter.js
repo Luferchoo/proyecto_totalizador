@@ -27,7 +27,7 @@ form.addEventListener("submit", (event) => {
   div.innerHTML = "<p>" + "Cantidad de items:      " + items_numero + 
   "<br/>Precio por Item:       " + precio_numero + 
   "<br/>Estado:       " + estado_string + 
-  "<br/>Impuesto:       " + impuesto + 
+  "<br/>Impuesto:       " + impuesto + "%" +
   "<br/>Precio Neto:       " + precio_net +
   "<br/>Impuesto Total:       " + impuesto_total +
   "<br/>Descuento Total:       " + descuento +
