@@ -12,7 +12,7 @@ function tasaImpu(estado) {
     if (estado == "Alabama"){
       impuesto = 4.00;
     } 
-    if (estado === "California"){
+    if (estado == "California"){
       impuesto = 8.25;
     }            
     return impuesto;
