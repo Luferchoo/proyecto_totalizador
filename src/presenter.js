@@ -1,5 +1,6 @@
 import tasaImpu from './Tasa';
 import precio_neto from './precio_neto';
+import impuesto_total_ca from './impuesto_total_ca';
 
 const items = document.querySelector("#items-numero");
 const precio = document.querySelector("#precio-numero");
@@ -19,6 +20,7 @@ form.addEventListener("submit", (event) => {
   "<br/>Precio por Item:       " + precio_numero + 
   "<br/>Estado:       " + estado_string + 
   "<br/>Impuesto:       " + tasaImpu(estado_string) + 
-  "<br/>Precio Neto:       " + precio_neto(items_numero,precio_numero) +"</p>";
+  "<br/>Precio Neto:       " + precio_neto(items_numero,precio_numero) +
+  "<br/>Impuesto Total Ca:       " + impuesto_total_ca(precio_neto(items_numero,precio_numero),tasaImpu(estado_string)) +"</p>";
 });
 
